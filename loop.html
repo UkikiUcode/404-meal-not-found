@@ -1,6 +1,42 @@
-<html><head><meta charset='UTF-8'></head><body style='background:#003366;color:white;text-align:center;font-family:sans-serif;padding-top:20%'><h1>Format d’émotion non reconnu</h1>
-<audio autoplay loop>
-  <source src="loop-tick.mp3" type="audio/mpeg">
-</audio>
 
-</body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loop : Hunger Reloaded</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
+      color: #ff5050;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+    p {
+      font-size: 1.2em;
+      color: #999999;
+    }
+  </style>
+</head>
+<body>
+  <h1>Loop : Hunger Reloaded</h1>
+  <p>(Cliquez n'importe où pour entendre.)</p>
+  <audio id="alarm" src="alarm.mp3"></audio>
+  <script>
+    document.addEventListener("click", () => {
+      const audio = document.getElementById("alarm");
+      if (audio.paused) {
+        audio.play().catch(e => console.log(e));
+      }
+    });
+  </script>
+</body>
+</html>
